@@ -8,6 +8,7 @@ const ColoradoPaycheckCalculator = () => {
     <Layout 
       title="Colorado Paycheck Calculator" 
       description="Free Colorado paycheck calculator to estimate your take-home pay with accurate Colorado state tax calculations."
+      keywords="colorado paycheck calculator, colorado tax calculator, colorado salary calculator, colorado take-home pay, colorado withholding calculator, colorado wage calculator"
     >
       <div>
         <PaycheckCalculator stateName="Colorado" stateAbbreviation="CO" />

@@ -8,6 +8,7 @@ const NevadaPaycheckCalculator = () => {
     <Layout 
       title="Nevada Paycheck Calculator" 
       description="Calculate your take-home pay with our Nevada paycheck calculator. Nevada has no state income tax."
+      keywords="nevada paycheck calculator, nevada tax calculator, nevada salary calculator, nevada take-home pay, nevada withholding calculator, nevada wage calculator"
     >
       <div>
         <PaycheckCalculator stateName="Nevada" stateAbbreviation="NV" />

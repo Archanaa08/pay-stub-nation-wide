@@ -8,6 +8,7 @@ const IndianaPaycheckCalculator = () => {
     <Layout 
       title="Indiana Paycheck Calculator" 
       description="Calculate your Indiana paycheck and take-home pay with our free Indiana state tax calculator."
+      keywords="indiana paycheck calculator, indiana tax calculator, indiana salary calculator, indiana take-home pay, indiana withholding calculator, indiana wage calculator"
     >
       <div>
         <PaycheckCalculator stateName="Indiana" stateAbbreviation="IN" />

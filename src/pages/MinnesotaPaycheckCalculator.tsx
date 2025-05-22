@@ -8,6 +8,7 @@ const MinnesotaPaycheckCalculator = () => {
     <Layout 
       title="Minnesota Paycheck Calculator" 
       description="Free Minnesota paycheck calculator to estimate your take-home pay with accurate Minnesota state tax withholding."
+      keywords="minnesota paycheck calculator, mn paycheck calculator, minnesota tax calculator, minnesota salary calculator, minnesota take-home pay, minnesota withholding calculator, minnesota wage calculator"
     >
       <div>
         <PaycheckCalculator stateName="Minnesota" stateAbbreviation="MN" />

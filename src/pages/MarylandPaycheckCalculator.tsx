@@ -8,6 +8,7 @@ const MarylandPaycheckCalculator = () => {
     <Layout 
       title="Maryland Paycheck Calculator" 
       description="Free Maryland paycheck calculator with accurate Maryland state tax calculations to estimate your net pay."
+      keywords="maryland paycheck calculator, maryland tax calculator, maryland salary calculator, maryland take-home pay, maryland withholding calculator, maryland wage calculator"
     >
       <div>
         <PaycheckCalculator stateName="Maryland" stateAbbreviation="MD" />

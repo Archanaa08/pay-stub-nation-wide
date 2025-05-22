@@ -8,9 +8,10 @@ interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
+  keywords?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
+const Layout: React.FC<LayoutProps> = ({ children, title, description, keywords }) => {
   // Set document title for SEO
   React.useEffect(() => {
     if (title) {
@@ -29,7 +30,20 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
         document.getElementsByTagName('head')[0].appendChild(meta);
       }
     }
-  }, [title, description]);
+
+    // Set meta keywords for SEO
+    if (keywords) {
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', keywords);
+      } else {
+        const meta = document.createElement('meta');
+        meta.name = 'keywords';
+        meta.content = keywords;
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
+    }
+  }, [title, description, keywords]);
 
   return (
     <div className="min-h-screen flex flex-col">

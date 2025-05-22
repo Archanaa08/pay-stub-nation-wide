@@ -8,6 +8,7 @@ const NorthCarolinaPaycheckCalculator = () => {
     <Layout 
       title="North Carolina Paycheck Calculator" 
       description="Free North Carolina paycheck calculator to estimate your take-home pay with accurate North Carolina state tax withholding."
+      keywords="north carolina paycheck calculator, north carolina tax calculator, north carolina salary calculator, north carolina take-home pay, north carolina withholding calculator, north carolina wage calculator"
     >
       <div>
         <PaycheckCalculator stateName="North Carolina" stateAbbreviation="NC" />

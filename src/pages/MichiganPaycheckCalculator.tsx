@@ -8,6 +8,7 @@ const MichiganPaycheckCalculator = () => {
     <Layout 
       title="Michigan Paycheck Calculator" 
       description="Calculate your Michigan paycheck with our free calculator. Accurate take-home pay estimation with Michigan state taxes included."
+      keywords="michigan paycheck calculator, michigan tax calculator, michigan salary calculator, michigan take-home pay, michigan withholding calculator, michigan wage calculator"
     >
       <div>
         <PaycheckCalculator stateName="Michigan" stateAbbreviation="MI" />

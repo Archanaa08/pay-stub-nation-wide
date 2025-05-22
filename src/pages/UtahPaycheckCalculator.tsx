@@ -8,6 +8,7 @@ const UtahPaycheckCalculator = () => {
     <Layout 
       title="Utah Paycheck Calculator" 
       description="Calculate your Utah paycheck and net pay with our free calculator that includes Utah state tax calculations."
+      keywords="utah paycheck calculator, utah tax calculator, utah salary calculator, utah take-home pay, utah withholding calculator, utah wage calculator"
     >
       <div>
         <PaycheckCalculator stateName="Utah" stateAbbreviation="UT" />

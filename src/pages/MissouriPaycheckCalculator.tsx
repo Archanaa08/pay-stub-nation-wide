@@ -8,6 +8,7 @@ const MissouriPaycheckCalculator = () => {
     <Layout 
       title="Missouri Paycheck Calculator" 
       description="Calculate your net pay with our Missouri paycheck calculator. Accurate Missouri state tax and federal tax estimations."
+      keywords="missouri paycheck calculator, missouri tax calculator, missouri salary calculator, missouri take-home pay, missouri withholding calculator, missouri wage calculator"
     >
       <div>
         <PaycheckCalculator stateName="Missouri" stateAbbreviation="MO" />
