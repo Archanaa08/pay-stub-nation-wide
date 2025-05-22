@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Contact from "./pages/Contact";
 
 // Import state specific calculator pages
 import MichiganPaycheckCalculator from "./pages/MichiganPaycheckCalculator";
@@ -28,6 +29,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/contact" element={<Contact />} />
           
           {/* State Paycheck Calculator Routes */}
           <Route path="/michigan-paycheck-calculator" element={<MichiganPaycheckCalculator />} />

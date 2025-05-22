@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calculator, Home } from 'lucide-react';
+import { Calculator, Home, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface LayoutProps {
@@ -66,6 +66,12 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description, keywords 
                   <Link to="/" className="hover:text-finance-accent transition-colors flex items-center">
                     <Home size={18} className="mr-1" />
                     <span>Home</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="hover:text-finance-accent transition-colors flex items-center">
+                    <MessageSquare size={18} className="mr-1" />
+                    <span>Contact</span>
                   </Link>
                 </li>
               </ul>
