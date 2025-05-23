@@ -7,3 +7,13 @@ Crawl-delay: 10
 
 # Sitemap
 Sitemap: https://salarycheck.me/sitemap.xml
+
+# Allow specific search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>Paycheck Calculator - State Paycheck Calculators</title>
     <meta name="description" content="Free paycheck calculators for states including Michigan, Colorado, Indiana, Maryland, Missouri, Nevada, North Carolina, Utah, and Minnesota." />
     <meta name="author" content="Paycheck Calculator" />
@@ -12,6 +12,12 @@
 
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgcng9IjQiIGZpbGw9IiMxMTQyNzUiLz4KICAgIDxwYXRoIGQ9Ik0xNyA5VjdDMTcgNS44OTU0MyAxNi4xMDQ2IDUgMTUgNUg1QzMuODk1NDMgNSAzIDUuODk1NDMgMyA3VjE3QzMgMTguMTA0NiAzLjg5NTQzIDE5IDUgMTlIMTVDMTYuMTA0NiAxOSAxNyAxOC4xMDQ2IDE3IDE3VjE1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPHBhdGggZD0iTTEyIDhIOFYxNkgxMiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDxwYXRoIGQ9Ik0xNSAxMkgyMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgIDxwYXRoIGQ9Ik0xOCA5TDIxIDEyTDE4IDE1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4=" type="image/svg+xml">
+
+    <!-- Mobile optimization -->
+    <meta name="theme-color" content="#114275">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
 
     <!-- Open Graph / Social Media Tags -->
     <meta property="og:title" content="Paycheck Calculator - State Paycheck Calculators" />
@@ -23,6 +29,8 @@
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@salarycheck_me" />
+    <meta name="twitter:title" content="Paycheck Calculator - State Paycheck Calculators" />
+    <meta name="twitter:description" content="Free paycheck calculators for all states. Calculate your take-home pay with taxes and deductions." />
     <meta name="twitter:image" content="https://salarycheck.me/opengraph-image.png" />
     
     <!-- Canonical Link -->
@@ -41,6 +49,20 @@
           "target": "https://salarycheck.me/?search={search_term}",
           "query-input": "required name=search_term"
         }
+      }
+    </script>
+    
+    <!-- Organization Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Paycheck Calculator",
+        "url": "https://salarycheck.me/",
+        "logo": "https://salarycheck.me/logo.png",
+        "sameAs": [
+          "https://twitter.com/salarycheck_me"
+        ]
       }
     </script>
   </head>
