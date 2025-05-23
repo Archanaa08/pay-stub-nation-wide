@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calculator, Home, MessageSquare, Info } from 'lucide-react';
+import { Calculator, Home, MessageSquare, Info, HelpCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { states } from '@/utils/stateData';
 
@@ -76,6 +76,12 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description, keywords 
                   </Link>
                 </li>
                 <li>
+                  <Link to="/faq" className="hover:text-finance-accent transition-colors flex items-center">
+                    <HelpCircle size={18} className="mr-1" />
+                    <span>FAQ</span>
+                  </Link>
+                </li>
+                <li>
                   <Link to="/contact" className="hover:text-finance-accent transition-colors flex items-center">
                     <MessageSquare size={18} className="mr-1" />
                     <span>Contact</span>
@@ -110,6 +116,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description, keywords 
               <ul className="space-y-2">
                 <li><Link to="/" className="text-gray-300 hover:text-finance-accent transition-colors">Home</Link></li>
                 <li><Link to="/about" className="text-gray-300 hover:text-finance-accent transition-colors">About</Link></li>
+                <li><Link to="/faq" className="text-gray-300 hover:text-finance-accent transition-colors">FAQ</Link></li>
                 <li><Link to="/contact" className="text-gray-300 hover:text-finance-accent transition-colors">Contact</Link></li>
               </ul>
             </div>

@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Faq from "./pages/Faq";
 
 // Import state specific calculator pages
 import MichiganPaycheckCalculator from "./pages/MichiganPaycheckCalculator";
@@ -36,6 +37,23 @@ const SeoProvider = () => {
         <meta property="og:description" content="Free paycheck calculator to estimate your take-home pay with accurate federal and state tax calculations." />
         <meta property="og:url" content="https://salarycheck.me/" />
         <meta property="og:type" content="website" />
+        {/* Schema markup for Organization */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "url": "https://salarycheck.me/",
+              "name": "Paycheck Calculator",
+              "description": "Free paycheck calculator to estimate your take-home pay with accurate federal and state tax calculations.",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Customer Support",
+                "url": "https://salarycheck.me/contact"
+              }
+            }
+          `}
+        </script>
       </Helmet>
       <Outlet />
     </>
@@ -53,6 +71,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<Faq />} />
             
             {/* State Paycheck Calculator Routes */}
             <Route path="/michigan-paycheck-calculator" element={<MichiganPaycheckCalculator />} />
