@@ -4,6 +4,7 @@ import Layout from '@/components/Layout';
 import StateCard from '@/components/StateCard';
 import { states } from '@/utils/stateData';
 import { Calculator } from 'lucide-react';
+import FloatingCalculatorButton from '@/components/FloatingCalculatorButton';
 
 const Index = () => {
   return (
@@ -21,6 +22,21 @@ const Index = () => {
             Calculate your take-home pay for any state with our accurate paycheck calculators.
             Our calculators include federal, state, and local taxes, as well as FICA and other deductions.
           </p>
+        </div>
+
+        <div className="p-6 bg-finance-light rounded-lg border border-gray-200 mb-12">
+          <h2 className="text-2xl font-semibold text-finance-primary mb-4">What is a Paycheck Calculator?</h2>
+          <div className="text-gray-700">
+            <p className="mb-3">
+              A paycheck calculator helps you determine your take-home pay after taxes and deductions. It's an essential tool for financial planning, helping you understand exactly how much of your salary actually ends up in your bank account.
+            </p>
+            <p className="mb-3">
+              Our state-specific calculators account for federal income tax, state income tax, local taxes, Social Security, Medicare, and common deductions like healthcare and retirement contributions. This gives you a more accurate picture of your actual earnings.
+            </p>
+            <p>
+              Whether you're considering a new job offer, planning a move to another state, or just want to better understand your current paycheck, our calculators provide clear, accurate estimates to help you make informed financial decisions.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -52,6 +68,7 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <FloatingCalculatorButton />
     </Layout>
   );
 };
