@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 // Import state specific calculator pages
 import MichiganPaycheckCalculator from "./pages/MichiganPaycheckCalculator";
@@ -50,6 +51,7 @@ const App = () => (
         <Routes>
           <Route element={<SeoProvider />}>
             <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             
             {/* State Paycheck Calculator Routes */}

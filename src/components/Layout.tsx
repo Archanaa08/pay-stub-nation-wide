@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calculator, Home, MessageSquare } from 'lucide-react';
+import { Calculator, Home, MessageSquare, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { states } from '@/utils/stateData';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -69,6 +70,12 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description, keywords 
                   </Link>
                 </li>
                 <li>
+                  <Link to="/about" className="hover:text-finance-accent transition-colors flex items-center">
+                    <Info size={18} className="mr-1" />
+                    <span>About</span>
+                  </Link>
+                </li>
+                <li>
                   <Link to="/contact" className="hover:text-finance-accent transition-colors flex items-center">
                     <MessageSquare size={18} className="mr-1" />
                     <span>Contact</span>
@@ -92,17 +99,40 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description, keywords 
       
       <footer className="bg-finance-dark text-white py-8">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <p className="font-display font-bold text-xl">Paycheck Calculator</p>
-              <p className="text-sm text-gray-300 mt-1">Accurate Paycheck Calculations</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <p className="text-sm text-gray-300">© {new Date().getFullYear()} <a href="https://salarycheck.me" className="hover:text-finance-accent transition-colors">salarycheck.me</a>. All rights reserved.</p>
+              <p className="font-display font-bold text-xl mb-4">Paycheck Calculator</p>
+              <p className="text-sm text-gray-300">Accurate paycheck calculations to estimate your take-home pay with taxes and deductions.</p>
+            </div>
+            
+            <div>
+              <h3 className="font-semibold text-lg mb-3">Resources</h3>
+              <ul className="space-y-2">
+                <li><Link to="/" className="text-gray-300 hover:text-finance-accent transition-colors">Home</Link></li>
+                <li><Link to="/about" className="text-gray-300 hover:text-finance-accent transition-colors">About</Link></li>
+                <li><Link to="/contact" className="text-gray-300 hover:text-finance-accent transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+            
+            <div className="md:col-span-2">
+              <h3 className="font-semibold text-lg mb-3">State Calculators</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                {states.map((state) => (
+                  <Link 
+                    key={state.abbreviation}
+                    to={state.path}
+                    className="text-gray-300 hover:text-finance-accent transition-colors text-sm"
+                  >
+                    {state.name}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="mt-6 pt-6 border-t border-gray-700 text-sm text-gray-400">
-            <p>Disclaimer: This calculator provides estimates only and should not be used for tax filing purposes.</p>
+          
+          <div className="mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-sm text-gray-300">© {new Date().getFullYear()} <a href="https://salarycheck.me" className="hover:text-finance-accent transition-colors">salarycheck.me</a>. All rights reserved.</p>
+            <p className="text-sm text-gray-400 mt-2 md:mt-0">Disclaimer: This calculator provides estimates only and should not be used for tax filing purposes.</p>
           </div>
         </div>
       </footer>
