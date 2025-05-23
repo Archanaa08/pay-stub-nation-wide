@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import StateCard from '@/components/StateCard';
 import { states } from '@/utils/stateData';
-import { Calculator } from 'lucide-react';
+import { Calculator, DollarSign, Percent, Clock } from 'lucide-react';
 import FloatingCalculatorButton from '@/components/FloatingCalculatorButton';
 
 const Index = () => {
@@ -36,6 +36,35 @@ const Index = () => {
             <p>
               Whether you're considering a new job offer, planning a move to another state, or just want to better understand your current paycheck, our calculators provide clear, accurate estimates to help you make informed financial decisions.
             </p>
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-2xl font-semibold text-finance-primary mb-6">How Paycheck Calculators Work</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+              <div className="mb-4 bg-finance-light inline-flex p-2 rounded-full text-finance-primary">
+                <DollarSign size={24} />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Income Input</h3>
+              <p className="text-gray-600">Enter your gross salary, hourly wage, or annual income to start the calculation process.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+              <div className="mb-4 bg-finance-light inline-flex p-2 rounded-full text-finance-primary">
+                <Percent size={24} />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Tax Calculations</h3>
+              <p className="text-gray-600">Our calculator applies current federal, state, and local tax rates to your income.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+              <div className="mb-4 bg-finance-light inline-flex p-2 rounded-full text-finance-primary">
+                <Clock size={24} />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Instant Results</h3>
+              <p className="text-gray-600">Get immediate estimates of your net pay per paycheck, monthly, and annually.</p>
+            </div>
           </div>
         </div>
 

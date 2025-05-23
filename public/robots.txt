@@ -2,8 +2,8 @@
 User-agent: *
 Allow: /
 
-# Crawl delay to be nice to search engines
-Crawl-delay: 10
+# Optimize crawl rate
+Crawl-delay: 5
 
 # Sitemap
 Sitemap: https://salarycheck.me/sitemap.xml
@@ -17,3 +17,9 @@ Allow: /
 
 User-agent: Slurp
 Allow: /
+
+# Disallow unnecessary resources to improve crawling efficiency
+User-agent: *
+Disallow: /assets/
+Disallow: /*.js$
+Disallow: /*.css$

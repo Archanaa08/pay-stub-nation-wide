@@ -8,7 +8,11 @@
     <meta name="description" content="Free paycheck calculators for states including Michigan, Colorado, Indiana, Maryland, Missouri, Nevada, North Carolina, Utah, and Minnesota." />
     <meta name="author" content="Paycheck Calculator" />
     <meta name="keywords" content="paycheck calculator, take-home pay, payroll, tax calculator" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
 
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgcng9IjQiIGZpbGw9IiMxMTQyNzUiLz4KICAgIDxwYXRoIGQ9Ik0xNyA5VjdDMTcgNS44OTU0MyAxNi4xMDQ2IDUgMTUgNUg1QzMuODk1NDMgNSAzIDUuODk1NDMgMyA3VjE3QzMgMTguMTA0NiAzLjg5NTQzIDE5IDUgMTlIMTVDMTYuMTA0NiAxOSAxNyAxOC4xMDQ2IDE3IDE3VjE1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPHBhdGggZD0iTTEyIDhIOFYxNkgxMiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDxwYXRoIGQ9Ik0xNSAxMkgyMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgIDxwYXRoIGQ9Ik0xOCA5TDIxIDEyTDE4IDE1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4=" type="image/svg+xml">
@@ -18,6 +22,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
+
+    <!-- Performance optimizations -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="color-scheme" content="light">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://cdn.gpteng.co" crossorigin>
 
     <!-- Open Graph / Social Media Tags -->
     <meta property="og:title" content="Paycheck Calculator - State Paycheck Calculators" />
@@ -62,6 +74,32 @@
         "logo": "https://salarycheck.me/logo.png",
         "sameAs": [
           "https://twitter.com/salarycheck_me"
+        ]
+      }
+    </script>
+
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a paycheck calculator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A paycheck calculator is a tool that helps you determine your take-home pay after taxes and deductions. It accounts for federal income tax, state income tax, local taxes, Social Security, Medicare, and other common deductions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are paycheck calculators accurate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our state-specific paycheck calculators provide accurate estimates based on current tax rates and withholding formulas. While they're a reliable guide, the exact amount may vary slightly based on specific circumstances."
+            }
+          }
         ]
       }
     </script>
