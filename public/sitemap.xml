@@ -139,4 +139,22 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://salarycheck.me/wisconsin-paycheck-calculator</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://salarycheck.me/kansas-paycheck-calculator</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://salarycheck.me/kentucky-paycheck-calculator</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

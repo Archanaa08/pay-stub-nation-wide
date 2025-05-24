@@ -24,6 +24,17 @@ const Index = () => {
           </p>
         </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {states.map((state) => (
+            <StateCard
+              key={state.abbreviation}
+              name={state.name}
+              path={state.path}
+              abbreviation={state.abbreviation}
+            />
+          ))}
+        </div>
+
         <div className="p-6 bg-finance-light rounded-lg border border-gray-200 mb-12">
           <h2 className="text-2xl font-semibold text-finance-primary mb-4">What is a Paycheck Calculator?</h2>
           <div className="text-gray-700">
@@ -66,17 +77,6 @@ const Index = () => {
               <p className="text-gray-600">Get immediate estimates of your net pay per paycheck, monthly, and annually.</p>
             </div>
           </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {states.map((state) => (
-            <StateCard
-              key={state.abbreviation}
-              name={state.name}
-              path={state.path}
-              abbreviation={state.abbreviation}
-            />
-          ))}
         </div>
 
         <div className="mt-16 p-6 bg-finance-light rounded-lg border border-gray-200">

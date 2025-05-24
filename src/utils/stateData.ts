@@ -114,5 +114,23 @@ export const states: StateInfo[] = [
     abbreviation: "AR",
     path: "/arkansas-paycheck-calculator",
     metaDescription: "Free Arkansas paycheck calculator to estimate your take-home pay with accurate Arkansas state tax calculations."
+  },
+  {
+    name: "Wisconsin",
+    abbreviation: "WI",
+    path: "/wisconsin-paycheck-calculator",
+    metaDescription: "Calculate your Wisconsin paycheck and take-home pay with our free Wisconsin state tax calculator."
+  },
+  {
+    name: "Kansas",
+    abbreviation: "KS",
+    path: "/kansas-paycheck-calculator",
+    metaDescription: "Free Kansas paycheck calculator to estimate your take-home pay with accurate Kansas state tax calculations."
+  },
+  {
+    name: "Kentucky",
+    abbreviation: "KY",
+    path: "/kentucky-paycheck-calculator",
+    metaDescription: "Calculate your Kentucky paycheck and net pay with our free Kentucky state tax calculator."
   }
 ];
