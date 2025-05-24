@@ -28,6 +28,8 @@ import TennesseePaycheckCalculator from "./pages/TennesseePaycheckCalculator";
 import AlabamaPaycheckCalculator from "./pages/AlabamaPaycheckCalculator";
 import OklahomaPaycheckCalculator from "./pages/OklahomaPaycheckCalculator";
 import NewJerseyPaycheckCalculator from "./pages/NewJerseyPaycheckCalculator";
+import ArizonaPaycheckCalculator from "./pages/ArizonaPaycheckCalculator";
+import ArkansasPaycheckCalculator from "./pages/ArkansasPaycheckCalculator";
 
 const queryClient = new QueryClient();
 
@@ -97,6 +99,8 @@ const App = () => (
             <Route path="/alabama-paycheck-calculator" element={<AlabamaPaycheckCalculator />} />
             <Route path="/oklahoma-paycheck-calculator" element={<OklahomaPaycheckCalculator />} />
             <Route path="/new-jersey-paycheck-calculator" element={<NewJerseyPaycheckCalculator />} />
+            <Route path="/arizona-paycheck-calculator" element={<ArizonaPaycheckCalculator />} />
+            <Route path="/arkansas-paycheck-calculator" element={<ArkansasPaycheckCalculator />} />
           </Route>
           
           {/* Catch-all route */}

@@ -102,5 +102,17 @@ export const states: StateInfo[] = [
     abbreviation: "NJ",
     path: "/new-jersey-paycheck-calculator",
     metaDescription: "Calculate your New Jersey paycheck and take-home pay with our free New Jersey state tax calculator."
+  },
+  {
+    name: "Arizona",
+    abbreviation: "AZ",
+    path: "/arizona-paycheck-calculator",
+    metaDescription: "Free Arizona paycheck calculator to estimate your take-home pay with accurate Arizona state tax calculations."
+  },
+  {
+    name: "Arkansas",
+    abbreviation: "AR",
+    path: "/arkansas-paycheck-calculator",
+    metaDescription: "Free Arkansas paycheck calculator to estimate your take-home pay with accurate Arkansas state tax calculations."
   }
 ];
