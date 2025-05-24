@@ -12,7 +12,7 @@ const FloatingCalculatorButton = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      <Popover>
+      <Popover open={isOpen} onOpenChange={setIsOpen}>
         <PopoverTrigger asChild>
           <Button 
             size="lg" 
@@ -35,6 +35,7 @@ const FloatingCalculatorButton = () => {
                   key={state.abbreviation}
                   to={state.path}
                   className="block p-2 bg-finance-light hover:bg-finance-light/80 rounded text-center text-sm transition-colors"
+                  onClick={() => setIsOpen(false)}
                 >
                   {state.name}
                 </Link>
@@ -44,6 +45,7 @@ const FloatingCalculatorButton = () => {
               <Link 
                 to="/"
                 className="block text-center text-sm text-finance-primary hover:underline"
+                onClick={() => setIsOpen(false)}
               >
                 View all states
               </Link>

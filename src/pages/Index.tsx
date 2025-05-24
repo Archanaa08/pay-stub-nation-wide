@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import StateCard from '@/components/StateCard';
 import { states } from '@/utils/stateData';
@@ -8,97 +9,155 @@ import FloatingCalculatorButton from '@/components/FloatingCalculatorButton';
 
 const Index = () => {
   return (
-    <Layout 
-      title="State Paycheck Calculators" 
-      description="Free paycheck calculators for all states. Calculate your take-home pay with taxes and deductions for your state."
-    >
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="mb-6 bg-finance-primary inline-flex p-3 rounded-full text-white">
-            <Calculator size={32} />
-          </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-finance-primary">State Paycheck Calculators</h1>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Calculate your take-home pay for any state with our accurate paycheck calculators.
-            Our calculators include federal, state, and local taxes, as well as FICA and other deductions.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {states.map((state) => (
-            <StateCard
-              key={state.abbreviation}
-              name={state.name}
-              path={state.path}
-              abbreviation={state.abbreviation}
-            />
-          ))}
-        </div>
-
-        <div className="p-6 bg-finance-light rounded-lg border border-gray-200 mb-12">
-          <h2 className="text-2xl font-semibold text-finance-primary mb-4">What is a Paycheck Calculator?</h2>
-          <div className="text-gray-700">
-            <p className="mb-3">
-              A paycheck calculator helps you determine your take-home pay after taxes and deductions. It's an essential tool for financial planning, helping you understand exactly how much of your salary actually ends up in your bank account.
+    <>
+      <Helmet>
+        <title>State Paycheck Calculators | Free Tax Calculator for All States</title>
+        <meta name="description" content="Free paycheck calculators for all 50 states. Calculate your take-home pay with accurate federal, state, and local tax calculations. Updated for 2025 tax rates." />
+        <meta name="keywords" content="paycheck calculator, state tax calculator, salary calculator, take-home pay, withholding calculator, net pay calculator, tax withholding" />
+        <link rel="canonical" href="https://salarycheck.me/" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="State Paycheck Calculators | Free Tax Calculator for All States" />
+        <meta property="og:description" content="Free paycheck calculators for all 50 states. Calculate your take-home pay with accurate tax calculations." />
+        <meta property="og:url" content="https://salarycheck.me/" />
+        <meta property="og:type" content="website" />
+        
+        {/* Enhanced Schema for HomePage */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://salarycheck.me/#webpage",
+              "url": "https://salarycheck.me/",
+              "name": "State Paycheck Calculators",
+              "description": "Free paycheck calculators for all 50 states. Calculate your take-home pay with accurate federal, state, and local tax calculations.",
+              "isPartOf": {
+                "@id": "https://salarycheck.me/#website"
+              },
+              "about": {
+                "@type": "Thing",
+                "name": "Paycheck Calculator",
+                "description": "Tools for calculating take-home pay and tax withholdings"
+              },
+              "mainEntity": {
+                "@type": "ItemList",
+                "name": "State Paycheck Calculators",
+                "description": "List of paycheck calculators for all US states",
+                "numberOfItems": ${states.length},
+                "itemListElement": [
+                  ${states.map((state, index) => `
+                    {
+                      "@type": "ListItem",
+                      "position": ${index + 1},
+                      "item": {
+                        "@type": "SoftwareApplication",
+                        "name": "${state.name} Paycheck Calculator",
+                        "description": "${state.metaDescription}",
+                        "url": "https://salarycheck.me${state.path}",
+                        "applicationCategory": "FinanceApplication",
+                        "operatingSystem": "Web Browser"
+                      }
+                    }`).join(',\n                  ')}
+                ]
+              }
+            }
+          `}
+        </script>
+      </Helmet>
+      
+      <Layout 
+        title="State Paycheck Calculators" 
+        description="Free paycheck calculators for all states. Calculate your take-home pay with taxes and deductions for your state."
+      >
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="mb-6 bg-finance-primary inline-flex p-3 rounded-full text-white">
+              <Calculator size={32} />
+            </div>
+            <h1 className="text-3xl md:text-4xl font-bold text-finance-primary">State Paycheck Calculators</h1>
+            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+              Calculate your take-home pay for any state with our accurate paycheck calculators.
+              Our calculators include federal, state, and local taxes, as well as FICA and other deductions.
             </p>
-            <p className="mb-3">
-              Our state-specific calculators account for federal income tax, state income tax, local taxes, Social Security, Medicare, and common deductions like healthcare and retirement contributions. This gives you a more accurate picture of your actual earnings.
-            </p>
-            <p>
-              Whether you're considering a new job offer, planning a move to another state, or just want to better understand your current paycheck, our calculators provide clear, accurate estimates to help you make informed financial decisions.
-            </p>
           </div>
-        </div>
 
-        <div className="mb-16">
-          <h2 className="text-2xl font-semibold text-finance-primary mb-6">How Paycheck Calculators Work</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <div className="mb-4 bg-finance-light inline-flex p-2 rounded-full text-finance-primary">
-                <DollarSign size={24} />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Income Input</h3>
-              <p className="text-gray-600">Enter your gross salary, hourly wage, or annual income to start the calculation process.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <div className="mb-4 bg-finance-light inline-flex p-2 rounded-full text-finance-primary">
-                <Percent size={24} />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Tax Calculations</h3>
-              <p className="text-gray-600">Our calculator applies current federal, state, and local tax rates to your income.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <div className="mb-4 bg-finance-light inline-flex p-2 rounded-full text-finance-primary">
-                <Clock size={24} />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Instant Results</h3>
-              <p className="text-gray-600">Get immediate estimates of your net pay per paycheck, monthly, and annually.</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {states.map((state) => (
+              <StateCard
+                key={state.abbreviation}
+                name={state.name}
+                path={state.path}
+                abbreviation={state.abbreviation}
+              />
+            ))}
           </div>
-        </div>
 
-        <div className="mt-16 p-6 bg-finance-light rounded-lg border border-gray-200">
-          <h2 className="text-2xl font-semibold text-finance-primary mb-3">Why Use Our Paycheck Calculators?</h2>
-          <div className="grid md:grid-cols-3 gap-6 mt-6">
-            <div>
-              <h3 className="text-lg font-semibold text-finance-secondary mb-2">State-Specific Calculations</h3>
-              <p className="text-gray-600">Our calculators account for specific state tax rates, giving you accurate estimates.</p>
+          <div className="p-6 bg-finance-light rounded-lg border border-gray-200 mb-12">
+            <h2 className="text-2xl font-semibold text-finance-primary mb-4">What is a Paycheck Calculator?</h2>
+            <div className="text-gray-700">
+              <p className="mb-3">
+                A paycheck calculator helps you determine your take-home pay after taxes and deductions. It's an essential tool for financial planning, helping you understand exactly how much of your salary actually ends up in your bank account.
+              </p>
+              <p className="mb-3">
+                Our state-specific calculators account for federal income tax, state income tax, local taxes, Social Security, Medicare, and common deductions like healthcare and retirement contributions. This gives you a more accurate picture of your actual earnings.
+              </p>
+              <p>
+                Whether you're considering a new job offer, planning a move to another state, or just want to better understand your current paycheck, our calculators provide clear, accurate estimates to help you make informed financial decisions.
+              </p>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold text-finance-secondary mb-2">Easy to Use</h3>
-              <p className="text-gray-600">Simple forms with clear results make it easy to calculate your take-home pay.</p>
+          </div>
+
+          <div className="mb-16">
+            <h2 className="text-2xl font-semibold text-finance-primary mb-6">How Paycheck Calculators Work</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <div className="mb-4 bg-finance-light inline-flex p-2 rounded-full text-finance-primary">
+                  <DollarSign size={24} />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Income Input</h3>
+                <p className="text-gray-600">Enter your gross salary, hourly wage, or annual income to start the calculation process.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <div className="mb-4 bg-finance-light inline-flex p-2 rounded-full text-finance-primary">
+                  <Percent size={24} />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Tax Calculations</h3>
+                <p className="text-gray-600">Our calculator applies current federal, state, and local tax rates to your income.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <div className="mb-4 bg-finance-light inline-flex p-2 rounded-full text-finance-primary">
+                  <Clock size={24} />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Instant Results</h3>
+                <p className="text-gray-600">Get immediate estimates of your net pay per paycheck, monthly, and annually.</p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold text-finance-secondary mb-2">Completely Free</h3>
-              <p className="text-gray-600">No registration or fees required to use our paycheck calculators.</p>
+          </div>
+
+          <div className="mt-16 p-6 bg-finance-light rounded-lg border border-gray-200">
+            <h2 className="text-2xl font-semibold text-finance-primary mb-3">Why Use Our Paycheck Calculators?</h2>
+            <div className="grid md:grid-cols-3 gap-6 mt-6">
+              <div>
+                <h3 className="text-lg font-semibold text-finance-secondary mb-2">State-Specific Calculations</h3>
+                <p className="text-gray-600">Our calculators account for specific state tax rates, giving you accurate estimates.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-finance-secondary mb-2">Easy to Use</h3>
+                <p className="text-gray-600">Simple forms with clear results make it easy to calculate your take-home pay.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-finance-secondary mb-2">Completely Free</h3>
+                <p className="text-gray-600">No registration or fees required to use our paycheck calculators.</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <FloatingCalculatorButton />
-    </Layout>
+        <FloatingCalculatorButton />
+      </Layout>
+    </>
   );
 };
 

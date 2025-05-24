@@ -42,27 +42,88 @@ const SeoProvider = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Paycheck Calculator | Free Salary & Tax Calculator</title>
-        <meta name="description" content="Free paycheck calculator to estimate your take-home pay with accurate federal and state tax calculations." />
-        <meta name="keywords" content="paycheck calculator, salary calculator, tax calculator, take-home pay, withholding calculator" />
+        <meta name="description" content="Free paycheck calculator to estimate your take-home pay with accurate federal and state tax calculations. Calculate your net pay for all 50 states." />
+        <meta name="keywords" content="paycheck calculator, salary calculator, tax calculator, take-home pay, withholding calculator, net pay calculator, state tax calculator" />
         <link rel="canonical" href="https://salarycheck.me/" />
+        
+        {/* Open Graph / Social Media */}
         <meta property="og:title" content="Paycheck Calculator | Free Salary & Tax Calculator" />
         <meta property="og:description" content="Free paycheck calculator to estimate your take-home pay with accurate federal and state tax calculations." />
         <meta property="og:url" content="https://salarycheck.me/" />
         <meta property="og:type" content="website" />
-        {/* Schema markup for Organization */}
+        <meta property="og:site_name" content="Paycheck Calculator" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Paycheck Calculator | Free Salary & Tax Calculator" />
+        <meta name="twitter:description" content="Free paycheck calculator to estimate your take-home pay with accurate federal and state tax calculations." />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="SalaryCheck.me" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Language" content="en-US" />
+        
+        {/* Enhanced Schema markup for Organization and WebSite */}
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "url": "https://salarycheck.me/",
-              "name": "Paycheck Calculator",
-              "description": "Free paycheck calculator to estimate your take-home pay with accurate federal and state tax calculations.",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "Customer Support",
-                "url": "https://salarycheck.me/contact"
-              }
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://salarycheck.me/#organization",
+                  "name": "SalaryCheck.me",
+                  "url": "https://salarycheck.me/",
+                  "description": "Free paycheck calculator to estimate your take-home pay with accurate federal and state tax calculations.",
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "Customer Support",
+                    "url": "https://salarycheck.me/contact"
+                  },
+                  "sameAs": [
+                    "https://salarycheck.me/"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://salarycheck.me/#website",
+                  "url": "https://salarycheck.me/",
+                  "name": "Paycheck Calculator",
+                  "description": "Free paycheck calculator to estimate your take-home pay with accurate federal and state tax calculations.",
+                  "publisher": {
+                    "@id": "https://salarycheck.me/#organization"
+                  },
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                      "@type": "EntryPoint",
+                      "urlTemplate": "https://salarycheck.me/{search_term_string}-paycheck-calculator"
+                    },
+                    "query-input": "required name=search_term_string"
+                  }
+                },
+                {
+                  "@type": "SoftwareApplication",
+                  "name": "Paycheck Calculator",
+                  "description": "Free online paycheck calculator for all US states with accurate tax calculations",
+                  "url": "https://salarycheck.me/",
+                  "applicationCategory": "FinanceApplication",
+                  "operatingSystem": "Web Browser",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                  },
+                  "featureList": [
+                    "State-specific tax calculations",
+                    "Federal tax withholding",
+                    "FICA tax calculations",
+                    "Take-home pay estimation",
+                    "Multiple pay frequency options"
+                  ]
+                }
+              ]
             }
           `}
         </script>
