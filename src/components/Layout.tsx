@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calculator, Home, MessageSquare, Info, HelpCircle } from 'lucide-react';
@@ -16,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description, keywords 
   // Set document title for SEO
   React.useEffect(() => {
     if (title) {
-      document.title = `${title} | Free Paycheck Calculator`;
+      document.title = `${title} | Paycheck Calculator`;
     }
     
     // Set meta description for SEO
@@ -59,7 +58,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description, keywords 
                 <path d="M15 12H21" stroke="white" strokeWidth="2" strokeLinecap="round"/>
                 <path d="M18 9L21 12L18 15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <span className="font-display font-bold text-lg md:text-xl">Free Paycheck Calculator</span>
+              <span className="font-display font-bold text-lg md:text-xl">Paycheck Calculator</span>
             </Link>
             <nav className="hidden sm:block">
               <ul className="flex space-x-4 md:space-x-6">
@@ -114,7 +113,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description, keywords 
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
             <div>
-              <p className="font-display font-bold text-lg md:text-xl mb-3 md:mb-4">Free Paycheck Calculator</p>
+              <p className="font-display font-bold text-lg md:text-xl mb-3 md:mb-4">Paycheck Calculator</p>
               <p className="text-sm text-gray-300">Accurate paycheck calculations to estimate your take-home pay with federal and state taxes and deductions for all 50 states.</p>
             </div>
             
