@@ -4,24 +4,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-    <title>Paycheck Calculator - State Paycheck Calculators</title>
-    <meta name="description" content="Free paycheck calculators for states including Michigan, Colorado, Indiana, Maryland, Missouri, Nevada, North Carolina, Utah, and Minnesota." />
-    <meta name="author" content="Paycheck Calculator" />
-    <meta name="keywords" content="paycheck calculator, take-home pay, payroll, tax calculator" />
+    <title>Free Paycheck Calculator | State Tax Calculator for All 50 States 2025</title>
+    <meta name="description" content="Free paycheck calculator for all 50 states. Calculate your take-home pay, withholdings, and net salary with accurate federal and state tax calculations. Updated for 2025 tax rates." />
+    <meta name="author" content="SalaryCheck.me" />
+    <meta name="keywords" content="paycheck calculator, state tax calculator, salary calculator, take-home pay calculator, tax withholding calculator, net pay calculator, federal tax calculator, state income tax, payroll calculator" />
+    
+    <!-- Enhanced Mobile Optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Paycheck Calculator" />
+    <meta name="application-name" content="Paycheck Calculator" />
+    <meta name="theme-color" content="#114275" />
+    <meta name="msapplication-TileColor" content="#114275" />
+    <meta name="format-detection" content="telephone=no" />
     
     <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
 
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgcng9IjQiIGZpbGw9IiMxMTQyNzUiLz4KICAgIDxwYXRoIGQ9Ik0xNyA5VjdDMTcgNS44OTU0MyAxNi4xMDQ2IDUgMTUgNUg1QzMuODk1NDMgNSAzIDUuODk1NDMgMyA3VjE3QzMgMTguMTA0NiAzLjg5NTQzIDE5IDUgMTlIMTVDMTYuMTA0NiAxOSAxNyAxOC4xMDQ2IDE3IDE3VjE1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPHBhdGggZD0iTTEyIDhIOFYxNkgxMiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDxwYXRoIGQ9Ik0xNSAxMkgyMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgIDxwYXRoIGQ9Ik0xOCA5TDIxIDEyTDE4IDE1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4=" type="image/svg+xml">
-
-    <!-- Mobile optimization -->
-    <meta name="theme-color" content="#114275">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="format-detection" content="telephone=no">
+    <!-- Enhanced Favicon for better Google visibility -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgcng9IjQiIGZpbGw9IiMxMTQyNzUiLz4KICAgIDxwYXRoIGQ9Ik0xNyA5VjdDMTcgNS44OTU0MyAxNi4xMDQ2IDUgMTUgNUg1QzMuODk1NDMgNSAzIDUuODk1NDMgMyA3VjE3QzMgMTguMTA0NiAzLjg5NTQzIDE5IDUgMTlIMTVDMTYuMTA0NiAxOSAxNyAxOC4xMDQ2IDE3IDE3VjE1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPHBhdGggZD0iTTEyIDhIOFYxNkgxMiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDxwYXRoIGQ9Ik0xNSAxMkgyMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgIDxwYXRoIGQ9Ik0xOCA5TDIxIDEyTDE4IDE1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4=" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNCIgZmlsbD0iIzExNDI3NSIvPgogICAgPHBhdGggZD0iTTE3IDlWN0MxNyA1Ljg5NTQzIDE2LjEwNDYgNSAxNSA1SDVDMy44OTU0MyA1IDMgNS44OTU0MyAzIDdWMTdDMyAxOC4xMDQ2IDMuODk1NDMgMTkgNSAxOUgxNUMxNi4xMDQ2IDE5IDE3IDE4LjEwNDYgMTcgMTdWMTUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICA8cGF0aCBkPSJNMTIgOEg4VjE2SDEyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgPHBhdGggZD0iTTE1IDEySDIxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPHBhdGggZD0iTTE4IDlMMjEgMTJMMTggMTUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPg==" />
+    <link rel="shortcut icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgcng9IjQiIGZpbGw9IiMxMTQyNzUiLz4KICAgIDxwYXRoIGQ9Ik0xNyA5VjdDMTcgNS44OTU0MyAxNi4xMDQ2IDUgMTUgNUg1QzMuODk1NDMgNSAzIDUuODk1NDMgMyA3VjE3QzMgMTguMTA0NiAzLjg5NTQzIDE5IDUgMTlIMTVDMTYuMTA0NiAxOSAxNyAxOC4xMDQ2IDE3IDE3VjE1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPHBhdGggZD0iTTEyIDhIOFYxNkgxMiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDxwYXRoIGQ9Ik0xNSAxMkgyMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgIDxwYXRoIGQ9Ik0xOCA5TDIxIDEyTDE4IDE1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4=" />
 
     <!-- Performance optimizations -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,54 +38,72 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://cdn.gpteng.co" crossorigin>
 
-    <!-- Open Graph / Social Media Tags -->
-    <meta property="og:title" content="Paycheck Calculator - State Paycheck Calculators" />
-    <meta property="og:description" content="Free paycheck calculators for all states. Calculate your take-home pay with taxes and deductions." />
+    <!-- Enhanced Open Graph / Social Media Tags -->
+    <meta property="og:title" content="Free Paycheck Calculator | State Tax Calculator for All 50 States 2025" />
+    <meta property="og:description" content="Free paycheck calculator for all 50 states. Calculate your take-home pay, withholdings, and net salary with accurate federal and state tax calculations." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://salarycheck.me/" />
     <meta property="og:image" content="https://salarycheck.me/opengraph-image.png" />
+    <meta property="og:site_name" content="SalaryCheck.me" />
+    <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter Card Tags -->
+    <!-- Enhanced Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@salarycheck_me" />
-    <meta name="twitter:title" content="Paycheck Calculator - State Paycheck Calculators" />
-    <meta name="twitter:description" content="Free paycheck calculators for all states. Calculate your take-home pay with taxes and deductions." />
+    <meta name="twitter:title" content="Free Paycheck Calculator | State Tax Calculator for All 50 States 2025" />
+    <meta name="twitter:description" content="Free paycheck calculator for all 50 states. Calculate your take-home pay, withholdings, and net salary with accurate federal and state tax calculations." />
     <meta name="twitter:image" content="https://salarycheck.me/opengraph-image.png" />
     
     <!-- Canonical Link -->
     <link rel="canonical" href="https://salarycheck.me/" />
     
-    <!-- WebSite Schema Markup -->
+    <!-- Enhanced WebSite Schema Markup -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Paycheck Calculator",
+        "name": "SalaryCheck.me - Free Paycheck Calculator",
+        "alternateName": "Paycheck Calculator",
         "url": "https://salarycheck.me/",
-        "description": "Free paycheck calculators for all states. Calculate your take-home pay with taxes and deductions.",
+        "description": "Free paycheck calculator for all 50 states. Calculate your take-home pay, withholdings, and net salary with accurate federal and state tax calculations.",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://salarycheck.me/?search={search_term}",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://salarycheck.me/{search_term}-paycheck-calculator"
+          },
           "query-input": "required name=search_term"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SalaryCheck.me",
+          "url": "https://salarycheck.me/"
         }
       }
     </script>
     
-    <!-- Organization Schema Markup -->
+    <!-- Enhanced Organization Schema Markup -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Paycheck Calculator",
+        "name": "SalaryCheck.me",
         "url": "https://salarycheck.me/",
         "logo": "https://salarycheck.me/logo.png",
+        "description": "Free paycheck calculator for all 50 states with accurate tax calculations",
+        "foundingDate": "2024",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "url": "https://salarycheck.me/contact"
+        },
         "sameAs": [
           "https://twitter.com/salarycheck_me"
         ]
       }
     </script>
 
-    <!-- FAQ Schema Markup -->
+    <!-- Enhanced FAQ Schema Markup -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -89,7 +114,7 @@
             "name": "What is a paycheck calculator?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A paycheck calculator is a tool that helps you determine your take-home pay after taxes and deductions. It accounts for federal income tax, state income tax, local taxes, Social Security, Medicare, and other common deductions."
+              "text": "A paycheck calculator is a free tool that helps you determine your take-home pay after taxes and deductions. It accounts for federal income tax, state income tax, local taxes, Social Security, Medicare, and other common deductions to give you an accurate estimate of your net pay."
             }
           },
           {
@@ -97,10 +122,49 @@
             "name": "Are paycheck calculators accurate?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Our state-specific paycheck calculators provide accurate estimates based on current tax rates and withholding formulas. While they're a reliable guide, the exact amount may vary slightly based on specific circumstances."
+              "text": "Our state-specific paycheck calculators provide highly accurate estimates based on current 2025 tax rates and withholding formulas. While they're a reliable guide for financial planning, the exact amount may vary slightly based on specific circumstances and employer-specific deductions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate my take-home pay?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To calculate your take-home pay, enter your gross salary or hourly wage into our paycheck calculator, select your state, filing status, and pay frequency. The calculator will automatically deduct federal taxes, state taxes, Social Security, Medicare, and any additional deductions you specify."
             }
           }
         ]
+      }
+    </script>
+
+    <!-- Software Application Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Free Paycheck Calculator",
+        "description": "Free online paycheck calculator for all 50 US states with accurate tax calculations and take-home pay estimates",
+        "url": "https://salarycheck.me/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "State-specific tax calculations for all 50 states",
+          "Federal tax withholding calculations",
+          "FICA tax calculations (Social Security and Medicare)",
+          "Take-home pay estimation",
+          "Multiple pay frequency options (weekly, bi-weekly, monthly, annual)",
+          "2025 updated tax rates",
+          "Mobile-responsive design"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "SalaryCheck.me"
+        }
       }
     </script>
   </head>
