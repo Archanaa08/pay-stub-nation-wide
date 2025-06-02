@@ -12,6 +12,9 @@ import About from "./pages/About";
 import Faq from "./pages/Faq";
 
 // Import state specific calculator pages
+import CaliforniaPaycheckCalculator from "./pages/CaliforniaPaycheckCalculator";
+import TexasPaycheckCalculator from "./pages/TexasPaycheckCalculator";
+import FloridaPaycheckCalculator from "./pages/FloridaPaycheckCalculator";
 import MichiganPaycheckCalculator from "./pages/MichiganPaycheckCalculator";
 import ColoradoPaycheckCalculator from "./pages/ColoradoPaycheckCalculator";
 import IndianaPaycheckCalculator from "./pages/IndianaPaycheckCalculator";
@@ -147,6 +150,9 @@ const App = () => (
             <Route path="/faq" element={<Faq />} />
             
             {/* State Paycheck Calculator Routes */}
+            <Route path="/california-paycheck-calculator" element={<CaliforniaPaycheckCalculator />} />
+            <Route path="/texas-paycheck-calculator" element={<TexasPaycheckCalculator />} />
+            <Route path="/florida-paycheck-calculator" element={<FloridaPaycheckCalculator />} />
             <Route path="/michigan-paycheck-calculator" element={<MichiganPaycheckCalculator />} />
             <Route path="/colorado-paycheck-calculator" element={<ColoradoPaycheckCalculator />} />
             <Route path="/indiana-paycheck-calculator" element={<IndianaPaycheckCalculator />} />
