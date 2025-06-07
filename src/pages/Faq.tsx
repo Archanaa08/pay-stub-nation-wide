@@ -12,6 +12,42 @@ const Faq = () => {
         <meta name="description" content="Find answers to commonly asked questions about paycheck calculations, taxes, deductions, and using our paycheck calculator." />
         <meta name="keywords" content="paycheck calculator FAQ, salary calculator questions, tax withholding FAQ, paycheck deductions, take-home pay questions" />
         <link rel="canonical" href="https://salarycheck.me/faq" />
+        
+        {/* WebPage Schema */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://salarycheck.me/faq#webpage",
+              "url": "https://salarycheck.me/faq",
+              "name": "Frequently Asked Questions | Paycheck Calculator",
+              "description": "Find answers to commonly asked questions about paycheck calculations, taxes, deductions, and using our paycheck calculator.",
+              "isPartOf": {
+                "@id": "https://salarycheck.me/#website"
+              },
+              "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://salarycheck.me/opengraph-image.png"
+              },
+              "datePublished": "2024-01-01",
+              "dateModified": "2024-12-07",
+              "author": {
+                "@type": "Organization",
+                "name": "SalaryCheck.me"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "SalaryCheck.me",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://salarycheck.me/favicon.ico"
+                }
+              }
+            }
+          `}
+        </script>
+        
         {/* FAQ Schema Markup */}
         <script type="application/ld+json">
           {`
@@ -57,6 +93,30 @@ const Faq = () => {
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Differences may occur due to specific employer policies, additional local taxes, unique benefit programs, or changes in tax laws since our last update. Other factors include supplemental wages, garnishments, or specialized deductions not covered by our calculator."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I save or print my calculation results?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Currently, there is no built-in feature to save or print results directly from the calculator. However, you can take a screenshot of your results or use your browser's print function (usually Ctrl+P or Cmd+P) to print the page."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do I calculate take-home pay for multiple jobs?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For multiple jobs, we recommend running separate calculations for each job and then combining the results. Keep in mind that having multiple jobs can push you into higher tax brackets, so the combined tax might be higher than calculating each job separately."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What if my state isn't listed in the calculator?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We're continuously adding more states to our calculator. If your state isn't currently available, you can check back soon as we regularly update our available states, contact us to request your state be added to our priority list, or use the generic calculator, which will calculate federal taxes accurately but estimate state taxes."
                   }
                 }
               ]
